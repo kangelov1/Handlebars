@@ -1,0 +1,38 @@
+<h1>Welcome to each page</h1>
+
+<p>List with this</p>
+<ul>
+    {{#each people}}
+        <li>{{this}}</li>
+    {{/each}}
+</ul>
+
+<p>List with dot</p>
+<ul>
+    {{#each people}}
+        <li>{{.}}</li>
+    {{/each}}
+</ul>
+
+<p>List with as |value key|</p>
+<ul>
+    {{#each people as |value key|}}
+        <li>{{key}}:{{value}}</li>
+    {{/each}}
+</ul>
+
+<p>Looping through object</p>
+<ul>
+    {{#each user}}
+        <li>{{@key}}:{{this}}</li>
+    {{/each}}
+</ul>
+
+<p>Nested objects</p>
+{{#each lists}}
+    {{#each this.items}}
+        <p>{{this}}</p>
+    {{/each}}
+    
+    
+{{/each}}
